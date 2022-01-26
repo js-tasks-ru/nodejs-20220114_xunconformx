@@ -36,7 +36,7 @@ server.on('request', (req, res) => {
         res.end('Server error.');
       });
 
-      stream.on('close', () => {
+      stream.on('finish', () => {
         res.statusCode = 201;
         res.end('Saved!');
       });
